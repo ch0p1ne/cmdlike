@@ -65,6 +65,9 @@ def main():
             _in = input("  Mon ordinateur : ")
             #print(f"{_in}")
             print(f"{_hostName}{_path}")
+            print(f"{sys.ps1()}")
+            print(f"{sys.ps2()}")
+
 
             ## un parcour dans un dictionnaire de commande par exemple
             if eval("_in == \"exit\""):

@@ -26,12 +26,7 @@ def init():
 
 
 def main():
-
-    _hostName = colored('Hello, World!', 'blue', 'on_red')
-    _path = colored('$src/home', 'blue', 'on_white')
-
      
-
     try :
         init()
 
@@ -54,8 +49,8 @@ def main():
         console.print(text)
         console.print("Visit my [link=https://www.willmcgugan.com]blog[/link]  c'est un lien ! :warning-emoji: ")
         
-        for i in track(range(20), description="Processing..."):
-            time.sleep(1)  # Simulate work being done
+        #for i in track(range(20), description="Processing..."):
+        #   time.sleep(1)  # Simulate work being done
 
         
     
@@ -64,9 +59,6 @@ def main():
         while True:
             _in = input("  Mon ordinateur : ")
             #print(f"{_in}")
-            print(f"{_hostName}{_path}")
-            print(f"{sys.ps1()}")
-            print(f"{sys.ps2()}")
 
 
             ## un parcour dans un dictionnaire de commande par exemple
@@ -74,6 +66,8 @@ def main():
                 break
             elif eval("_in == \"coloured\" "):
                 coloured()
+            else:
+                os.system(_in)
 
 
 

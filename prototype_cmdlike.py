@@ -16,7 +16,7 @@ from rich.console import Console
 from rich.text import Text
 
 #necessaire pour les couleur sur terminal Windows
-"just_fix_windows_console()
+#just_fix_windows_console()
 
 #commande personnaliser 
 @click.command()

@@ -34,7 +34,7 @@ def hello(count, name):
 
 
 def init():
-    os.system("cls") 
+    os.system("clear") 
 
 def main():
     console = Console()

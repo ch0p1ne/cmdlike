@@ -2,9 +2,11 @@ import click
 import sys
 import os
 import time
+import socket
 from rich.progress import track
 from rich import print
 from rich.layout import Layout
+import pathlib
 
 
 from colorama import just_fix_windows_console
@@ -22,25 +24,15 @@ def coloured():
     click.secho('Hello there', fg="blue", bold=True)
 
 def init():
-    os.system("cls")
-
+    os.system("cls") 
 
 def main():
-     
+    console = Console()
+
     try :
         init()
 
-        layout = Layout()
-        print(layout)
-        layout.split_column(
-        Layout(name="upper"),
-        Layout(name="lower")
-        )
-        print(layout)
-
-
-
-        console = Console()
+        
         console.print("This is text. ", style="bold underline green")
         console.print("[bold]This [cyan]is[/] some text. [/]")
 
@@ -57,7 +49,11 @@ def main():
 
          #boucle principal du programme REPL (read - evaluate - print - loop)
         while True:
-            _in = input("  Mon ordinateur : ")
+
+            hostName = Text(socket.gethostname())
+            hostName.stylize("bold magenta")
+            currentPath = pathlib.Path().absolute()
+            _in = console.input(f"{hostName}:ice: {currentPath} > ")
             #print(f"{_in}")
 
 

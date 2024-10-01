@@ -9,14 +9,14 @@ from rich.layout import Layout
 import pathlib
 
 
-from colorama import just_fix_windows_console
-from termcolor import colored
+#from colorama import just_fix_windows_console
+#from termcolor import colored
 
 from rich.console import Console
 from rich.text import Text
 
 #necessaire pour les couleur sur terminal Windows
-just_fix_windows_console()
+"just_fix_windows_console()
 
 #commande personnaliser 
 @click.command()

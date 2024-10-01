@@ -51,7 +51,7 @@ def main():
         while True:
 
             hostName = Text(socket.gethostname())
-            hostName.stylize("bold magenta")
+            hostName.stylize("italic magenta")
             currentPath = pathlib.Path().absolute()
             _in = console.input(f"{hostName}:ice: {currentPath} > ")
             #print(f"{_in}")

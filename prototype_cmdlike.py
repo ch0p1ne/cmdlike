@@ -53,7 +53,8 @@ def main():
             hostName = Text(socket.gethostname())
             hostName.stylize("italic magenta")
             currentPath = pathlib.Path().absolute()
-            _in = console.input(f"{hostName}:ice: {currentPath} > ")
+            console.print(f"\n  :green_circle: {hostName} :ice: {currentPath}  ")
+            _in = console.input("\n\t:zap: ")
             #print(f"{_in}")
 
 

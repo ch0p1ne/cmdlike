@@ -23,6 +23,16 @@ from rich.text import Text
 def coloured():
     click.secho('Hello there', fg="blue", bold=True)
 
+@click.command()
+@click.option('--count', default=1, help='Number of greetings.')
+@click.option('--name', prompt='Your name',
+              help='The person to greet.')
+def hello(count, name):
+    """Simple program that greets NAME for a total of COUNT times."""
+    for x in range(count):
+        click.echo(f"Hello {name}!")
+
+
 def init():
     os.system("cls") 
 
@@ -51,9 +61,11 @@ def main():
         while True:
 
             hostName = Text(socket.gethostname())
-            hostName.stylize("italic magenta")
+            hostName.stylize("bold magenta")
             currentPath = pathlib.Path().absolute()
             console.print(f"\n  :green_circle: {hostName} :ice: {currentPath}  ")
+            console.print(hostName)
+            
             _in = console.input("\n\t:zap: ")
             #print(f"{_in}")
 
@@ -63,6 +75,8 @@ def main():
                 break
             elif eval("_in == \"coloured\" "):
                 coloured()
+            elif eval("_in == \"hello\""):
+                hello()
             else:
                 os.system(_in)
 

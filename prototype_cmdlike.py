@@ -7,6 +7,8 @@ from rich.progress import track
 from rich import print
 from rich.layout import Layout
 import pathlib
+import rlcompleter
+import readline
 
 
 #from colorama import just_fix_windows_console
@@ -38,6 +40,7 @@ def init():
 
 def main():
     console = Console()
+    readline.parse_and_bind("tab: complete")
 
     try :
         init()
@@ -64,7 +67,6 @@ def main():
             hostName.stylize("bold magenta")
             currentPath = pathlib.Path().absolute()
             console.print(f"\n  :green_circle: {hostName} :ice: {currentPath}  ")
-            console.print(hostName)
             
             _in = console.input("\n\t:zap: ")
             #print(f"{_in}")

@@ -225,7 +225,7 @@ def run():
 
 if __name__ == "__main__":
     while True:
-        text = prompt("command> ", enable_system_prompt=True)
+        text = prompt("command> ", enable_system_prompt=True, enable_open_in_editor=True)
 
         if text == "go":    
             run()

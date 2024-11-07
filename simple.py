@@ -1,6 +1,8 @@
 #!/usr/bin/env python
 """ """
 
+from prompt_toolkit import prompt
+
 from pygments.lexers.html import HtmlLexer
 
 from prompt_toolkit.application import Application
@@ -222,4 +224,10 @@ def run():
 
 
 if __name__ == "__main__":
-    run()
+    while True:
+        text = prompt("command> ", enable_system_prompt=True)
+
+        if text == "go":    
+            run()
+        elif text == "exit":
+            break

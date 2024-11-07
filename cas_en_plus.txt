@@ -1,0 +1,3 @@
+Pour le sujet du stage , il est demander un cas:
+
+	essayons sa : programme back a sable python
